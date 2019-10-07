@@ -2,6 +2,15 @@
 
 Ini adalah project Sederhana mengupload image ke Server menggunakan Library Retrofit 2 dengan metode Multipart 
 
+untuk pengaturan server nya silahkan diubah ,
+
+```
+public class Config {
+    public static final String BASE_URL = "http://192.168.43.51"; // Your local IP Address
+    public static final String API_UPLOAD = BASE_URL +"/retroimg/upload.php";
+}
+```
+
 # Screenshoot
 
 ![11111](https://user-images.githubusercontent.com/15800599/66329679-1a0e0b80-e959-11e9-98b9-cbefb836b08a.jpg)
