@@ -2,7 +2,7 @@
 
 Ini adalah project Sederhana mengupload image ke Server menggunakan Library Retrofit 2 dengan metode Multipart 
 
-untuk pengaturan server nya silahkan diubah ,
+### untuk pengaturan server nya silahkan diubah ,
 
 ```
 public class Config {
@@ -10,8 +10,17 @@ public class Config {
     public static final String API_UPLOAD = BASE_URL +"/retroimg/upload.php";
 }
 ```
+### untuk mengatur kualitas gambar 
+```
+ public static Uri writeToTempImageAndGetPathUri(Context inContext, Bitmap inImage) {
+        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+        inImage.compress(Bitmap.CompressFormat.JPEG, 10, bytes);
+        String path = MediaStore.Images.Media.insertImage(inContext.getContentResolver(), inImage, "Title", null);
+        return Uri.parse(path);
+    }
+```
 
-# Screenshoot
+### Screenshoot
 
 ![11111](https://user-images.githubusercontent.com/15800599/66329679-1a0e0b80-e959-11e9-98b9-cbefb836b08a.jpg)
 ![1111](https://user-images.githubusercontent.com/15800599/66329677-1a0e0b80-e959-11e9-8d73-dfed56e61889.jpg)
