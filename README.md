@@ -4,4 +4,4 @@ Ini adalah project Sederhana mengupload image ke Server menggunakan Library Retr
 
 
 Referensi ini saya ambil dari blog : http://wimsonevel.blogspot.com/2016/11/tutorial-android-upload-image-using.html
-terimakasih :)
+terimakasih Smeoga bermanfaat :)
