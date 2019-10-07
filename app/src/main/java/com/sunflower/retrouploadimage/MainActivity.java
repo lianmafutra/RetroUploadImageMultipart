@@ -6,6 +6,7 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -104,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
 
                 if (baseResponse != null) {
                     Toast.makeText(MainActivity.this, baseResponse.getMessage(), Toast.LENGTH_SHORT).show();
+                    loading.setVisibility(View.GONE);
                 }
             }
 
@@ -119,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
         if (uri != null) {
             File file = FileUtils.getFile(this, uri);
             uploadMultipart(file);
-            Toast.makeText(this, "upload", Toast.LENGTH_SHORT).show();
+            loading.setVisibility(View.VISIBLE);
         } else {
             Toast.makeText(this, "You must choose the image", Toast.LENGTH_SHORT).show();
         }
